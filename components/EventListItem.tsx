@@ -6,7 +6,7 @@ import Feather from '@expo/vector-icons/Feather';
 export default function EventListItem({event}) { 
     return (
 
-        <View className='gap-3 p-3'>
+        <View className='gap-3 p-3 border-b-2 border-gray-100 pb-3'>
             <View className='flex-row'>
                 <View className='flex-1'>
                     <Text className='text-lg font-semibold uppercase text-amber-700'>Wed 13,Sep • 19:30 CEST</Text>
@@ -15,7 +15,7 @@ export default function EventListItem({event}) {
     */}
                     <Text className='text-xl font-bold' numberOfLines={1}>
                         {event.title}</Text>
-                    <Text className='text-gray-700'>{event.location}</Text>
+                   
                 </View>
                 {/*Event Image*/}
                 <Image
@@ -27,10 +27,10 @@ export default function EventListItem({event}) {
 
             {/*Footer*/}
             <View className='flex-row gap-3'>
-                <Text className='mr-auto text-gray-700'>16 GOING</Text>
+                <Text className='mr-auto text-gray-700'>{event.location}</Text>
 
-                <Feather name="share" size={24} color="black" />
-                <Feather name="bookmark" size={24} color="black" />
+                <Feather name="share" size={20} color="black" />
+                <Feather name="bookmark" size={20} color="black" />
             </View>
         </View>
 
